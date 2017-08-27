@@ -1,6 +1,10 @@
+ENV['RACK_ENV'] = 'test'
+
 require 'simplecov'
 require 'simplecov-console'
 require 'capybara/rspec'
+require 'data_mapper'
+require 'dm-postgres-adapter'
 require_relative '../app/app.rb'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
